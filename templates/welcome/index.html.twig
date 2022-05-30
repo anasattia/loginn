@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello  {{ app.user.firstname }}{{ app.user.name }}!{% endblock %}
+
+{% block body %}
+<style>
+    #example-wrapper {
+
+        font-family: Impact, Charcoal, sans-serif;
+        font-size: 22px;
+        letter-spacing: 0.8px;
+        word-spacing: 2.4px;
+        color: #000000;
+        font-weight: 700;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+
+    }
+
+</style>
+
+<div id="example-wrapper">
+    <h1><a style="color:red" >Hallo</a>  {{ app.user.firstname }} {{ app.user.name }}! ✅</h1>
+    <h2>Einfach von hier ausloggen ==> <a href="{{ path('app_logout') }}">Ausloggen</a></h2>
+
+</div>
+{% endblock %}
